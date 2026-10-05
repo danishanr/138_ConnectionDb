@@ -1,4 +1,3 @@
-import 'dotenv/config'
 import express from 'express'
 import pg from 'pg'
 const app = express()
@@ -13,11 +12,11 @@ app.use(
 )
 
 const pool = new Pool({
-    user: process.env.DB_USER,
-    host: process.env.DB_HOST,
-    database: process.env.DB_NAME,
-    password: process.env.DB_PASSWORD,
-    port: process.env.DB_PORT,
+    user: 'postgres',
+    host: 'localhost',
+    database: 'mahasiswa',
+    password: 'Supadmi2310',
+    port: '5432',
 })
 
 app.get('/', (req, res, next) => {
